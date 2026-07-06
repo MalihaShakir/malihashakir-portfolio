@@ -43,7 +43,7 @@ export default function Page() {
       color: '#3b82f6',
       backgroundColor: '#3b82f6',
       image: '/COMBINEWATER.png',
-      liveUrl: 'https://aquapi.vercel.app/dashboard',
+      liveUrl: 'https://aquapi.vercel.app/',
     },
     {
       number: 2,

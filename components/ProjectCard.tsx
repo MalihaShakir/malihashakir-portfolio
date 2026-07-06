@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef, useState } from 'react'
+import Image from 'next/image'
 
 interface ProjectCardProps {
   number: number
@@ -245,13 +246,16 @@ export function ProjectCard({
             >
               {/* Project Image or Parallax layer */}
               {image ? (
-                <motion.img
-                  src={image}
-                  alt={title}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  animate={{ x: mousePos.x / 2, y: mousePos.y / 2 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                />
+                <div className="absolute inset-0 w-full h-full">
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={number === 1}
+                  />
+                </div>
               ) : (
                 <motion.div
                   className="absolute inset-0 flex items-center justify-center"
