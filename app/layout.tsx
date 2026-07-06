@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Maliha Shakir' }],
   creator: 'Maliha Shakir',
   icons: {
-    icon: '/favicon.jpg',
+    icon: '/favicon.png',
     apple: '/apple-icon.png',
   },
   manifest: '/manifest.json',
