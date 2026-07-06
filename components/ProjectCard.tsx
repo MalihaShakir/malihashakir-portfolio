@@ -245,13 +245,11 @@ export function ProjectCard({
             >
               {/* Project Image or Parallax layer */}
               {image ? (
-                <motion.img
+                <img
                   src={image}
                   alt={title}
                   className="absolute inset-0 w-full h-full object-contain"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5 }}
+                  loading="lazy"
                 />
               ) : (
                 <motion.div
