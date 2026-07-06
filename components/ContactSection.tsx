@@ -62,24 +62,25 @@ export function ContactSection() {
               viewport={{ once: false }}
             >
               <div>
-                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-4">Preferred Contact</p>
+                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-4">Email</p>
                 <p className="text-lg text-[#f8fafc] font-semibold break-all hover:text-[#4f8cff] transition-colors">
-                  <a href="mailto:hello@malihashakir.dev">hello@malihashakir.dev</a>
+                  <a href="mailto:maliha.shakir2003@gmail.com">maliha.shakir2003@gmail.com</a>
                 </p>
               </div>
 
               <div>
-                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-4">Response Time</p>
-                <p className="text-[#f8fafc]">Usually within 24 hours</p>
+                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-4">Phone</p>
+                <p className="text-[#f8fafc]">
+                  <a href="tel:+923204520047" className="hover:text-[#4f8cff] transition-colors">+92 320 4520047</a>
+                </p>
               </div>
 
               <div>
                 <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-4">Connect With Me</p>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    { name: 'LinkedIn', url: '#', icon: 'in' },
-                    { name: 'GitHub', url: '#', icon: 'gh' },
-                    { name: 'Twitter', url: '#', icon: 'tw' },
+                    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/maliha-shakir', icon: 'in' },
+                    { name: 'GitHub', url: 'https://github.com/MalihaShakir', icon: 'gh' },
                   ].map((social, i) => (
                     <motion.a
                       key={i}
@@ -104,8 +105,8 @@ export function ContactSection() {
               className="p-6 rounded-lg border border-[#94a3b8]/20"
             >
               <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-2">Based in</p>
-              <p className="text-[#f8fafc] font-semibold">Remote / Global Timezone</p>
-              <p className="text-sm text-[#94a3b8] mt-2">Available for projects worldwide</p>
+              <p className="text-[#f8fafc] font-semibold">Pakistan (PKT UTC+5)</p>
+              <p className="text-sm text-[#94a3b8] mt-2">Available for remote projects worldwide</p>
             </motion.div>
           </motion.div>
 
@@ -132,7 +133,7 @@ export function ContactSection() {
 
                 {/* Main CTA Button */}
                 <motion.a
-                  href="mailto:hello@malihashakir.dev"
+                  href="mailto:maliha.shakir2003@gmail.com"
                   className="inline-flex items-center gap-3 px-10 py-5 rounded-lg bg-[#4f8cff] text-[#050816] font-semibold text-base hover:shadow-2xl hover:shadow-[#4f8cff]/40 active:scale-95 transition-all duration-300"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
