@@ -1,0 +1,116 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-inter), 'Inter', 'Inter Fallback';
+  --font-display: var(--font-geist-sans), 'Sohne', 'Sohne Fallback';
+  --color-background: #050816;
+  --color-surface: #0f172a;
+  --color-accent-blue: #4f8cff;
+  --color-accent-violet: #7c5cfc;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-glass: rgba(255, 255, 255, 0.05);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply bg-[#050816] text-[#f8fafc] font-sans;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-[#050816] text-[#f8fafc] antialiased;
+  }
+
+  h1 {
+    @apply font-display text-7xl lg:text-8xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply font-display text-5xl lg:text-6xl font-bold;
+  }
+
+  h3 {
+    @apply font-display text-3xl lg:text-4xl font-bold;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-[rgba(255,255,255,0.05)] backdrop-blur-md border border-[rgba(255,255,255,0.08)];
+  }
+
+  .glass-sm {
+    @apply bg-[rgba(255,255,255,0.03)] backdrop-blur-sm border border-[rgba(255,255,255,0.05)];
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#4f8cff] via-[#f8fafc] to-[#7c5cfc] bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply px-8 py-3 rounded-lg font-semibold text-sm transition-all duration-300 active:scale-95 bg-[#4f8cff] text-[#050816] hover:shadow-lg hover:shadow-[#4f8cff]/20;
+  }
+
+  .btn-ghost {
+    @apply px-8 py-3 rounded-lg font-semibold text-sm transition-all duration-300 active:scale-95 text-[#f8fafc] border border-[rgba(255,255,255,0.2)] hover:border-[rgba(255,255,255,0.4)] hover:bg-[rgba(255,255,255,0.05)];
+  }
+}
+
+@layer utilities {
+  .text-muted {
+    @apply text-[#94a3b8];
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Premium animation keyframes */
+@keyframes subtle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes micro-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes smooth-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(79, 140, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(79, 140, 255, 0.3);
+  }
+}
+
+/* Button smooth transitions */
+button,
+a[class*="btn"] {
+  @apply transition-all duration-300 ease-out;
+}
+
+button:hover,
+a[class*="btn"]:hover {
+  @apply will-change-transform;
+}
