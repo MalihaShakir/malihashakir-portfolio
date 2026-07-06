@@ -42,7 +42,7 @@ export default function Page() {
       result: 'Fully functional admin dashboard managing orders, inventory, customers, and finances efficiently.',
       color: '#3b82f6',
       backgroundColor: '#3b82f6',
-      image: '/COMBINEWATER.png',
+      image: '/combinewater.png',
       liveUrl: 'https://aquapi.vercel.app/',
     },
     {
@@ -62,7 +62,7 @@ export default function Page() {
       result: 'Successfully serving 15,000+ clients with 5.0★ rating and streamlined booking operations.',
       color: '#000000',
       backgroundColor: '#1a1a1a',
-      image: '/black trucks.PNG',
+      image: '/black-trucks.png',
       liveUrl: 'https://black-trucksco.vercel.app/',
     },
     {
@@ -82,7 +82,7 @@ export default function Page() {
       result: 'Clean, professional website positioning SolarCare Electric as a trusted solar partner.',
       color: '#f59e0b',
       backgroundColor: '#f59e0b',
-      image: '/solar care.PNG',
+      image: '/solar-care.png',
       liveUrl: 'https://solarcare-electric.com/',
     },
     {
@@ -102,7 +102,7 @@ export default function Page() {
       result: 'Beautiful platform combining commerce with community for meaningful content engagement.',
       color: '#dc2626',
       backgroundColor: '#dc2626',
-      image: '/pavulum.PNG',
+      image: '/pavulum.png',
       liveUrl: 'https://pavulum.com/',
     },
     {
@@ -122,7 +122,7 @@ export default function Page() {
       result: 'Professional platform effectively communicating expertise and reliability to clients.',
       color: '#8b5cf6',
       backgroundColor: '#8b5cf6',
-      image: '/lupin.PNG',
+      image: '/lupin.png',
       liveUrl: 'https://www.lupinprojectgroup.com/',
     },
   ]
