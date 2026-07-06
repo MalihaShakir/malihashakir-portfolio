@@ -27,6 +27,26 @@ export default function Page() {
   const projects: Project[] = [
     {
       number: 1,
+      title: 'Combine Water Management System',
+      year: '2024',
+      category: 'Full Stack Business Management',
+      technologies: ['Next.js', 'React', 'TypeScript', 'Dashboard', 'Admin Panel'],
+      overview: 'Comprehensive business management dashboard for water distribution company. Streamlines order processing, inventory tracking, customer management, and financial reporting.',
+      keyFeatures: [
+        'Real-time dashboard analytics and KPIs',
+        'Order and inventory management system',
+        'Customer tracking and payment records',
+        'Financial reports with profit calculations',
+      ],
+      challenges: 'Building a complete business management system with real-time data tracking and financial calculations.',
+      result: 'Fully functional admin dashboard managing orders, inventory, customers, and finances efficiently.',
+      color: '#3b82f6',
+      backgroundColor: '#3b82f6',
+      image: '/combinewater.png',
+      liveUrl: 'https://aquapal.vercel.app/dashboard',
+    },
+    {
+      number: 2,
       title: 'Black Trucks Co',
       year: '2024',
       category: 'Full Stack Web App',
@@ -46,7 +66,7 @@ export default function Page() {
       liveUrl: 'https://black-trucksco.vercel.app/',
     },
     {
-      number: 2,
+      number: 3,
       title: 'SolarCare Electric',
       year: '2024',
       category: 'Business Website',
@@ -66,7 +86,7 @@ export default function Page() {
       liveUrl: 'https://solarcare-electric.com/',
     },
     {
-      number: 3,
+      number: 4,
       title: 'Pavulum',
       year: '2024',
       category: 'eCommerce Platform',
@@ -86,7 +106,7 @@ export default function Page() {
       liveUrl: 'https://pavulum.com/',
     },
     {
-      number: 4,
+      number: 5,
       title: 'Lupin Project Group',
       year: '2024',
       category: 'Service Website',
