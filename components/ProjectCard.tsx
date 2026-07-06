@@ -234,8 +234,7 @@ export function ProjectCard({
             {/* Visual Placeholder - High contrast accent with parallax */}
             <motion.div
               ref={imageRef}
-              className="relative overflow-hidden rounded-2xl aspect-[4/3] cursor-move project-image"
-              style={{ backgroundColor: backgroundColor || `${color}15` }}
+              className="relative overflow-hidden rounded-2xl aspect-[4/3] cursor-move project-image bg-[#1e293b]"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -249,7 +248,10 @@ export function ProjectCard({
                   src={image}
                   alt={title}
                   className="absolute inset-0 w-full h-full object-contain"
-                  loading="lazy"
+                  onError={(e) => {
+                    console.error('Image failed to load:', image)
+                    e.currentTarget.style.display = 'none'
+                  }}
                 />
               ) : (
                 <motion.div

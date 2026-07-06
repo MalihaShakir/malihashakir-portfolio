@@ -52,7 +52,7 @@ export function PageLoader() {
             </motion.p>
 
             <motion.div
-              className="w-48 h-0.5 bg-[#1e293b] rounded-full overflow-hidden"
+              className="w-48 h-0.5 bg-[#1e293b] rounded-full overflow-hidden mx-auto"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
