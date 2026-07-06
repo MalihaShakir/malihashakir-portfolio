@@ -42,7 +42,7 @@ export default function Page() {
       result: 'Fully functional admin dashboard managing orders, inventory, customers, and finances efficiently.',
       color: '#3b82f6',
       backgroundColor: '#3b82f6',
-      image: '/combinewater.png',
+      image: '/COMBINEWATER.png',
       liveUrl: 'https://aquapi.vercel.app/dashboard',
     },
     {
