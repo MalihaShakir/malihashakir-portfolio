@@ -9,12 +9,15 @@ export function PageLoader() {
 
   useEffect(() => {
     // Quick load completion
-    const timer = setTimeout(() => setIsLoading(false), 1800)
+    const timer = setTimeout(() => setIsLoading(false), 1500)
     
-    // Smooth progress
+    // Smooth progress animation
     const interval = setInterval(() => {
-      setProgress((prev) => Math.min(prev + Math.random() * 25, 90))
-    }, 150)
+      setProgress((prev) => {
+        if (prev >= 100) return 100
+        return Math.min(prev + Math.random() * 30, 100)
+      })
+    }, 100)
 
     return () => {
       clearTimeout(timer)

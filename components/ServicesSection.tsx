@@ -7,37 +7,31 @@ export function ServicesSection() {
     {
       title: 'Web Development',
       description: 'Premium websites and web applications built with Next.js, React, and modern web technologies. Performance-optimized for maximum speed and SEO.',
-      icon: '→',
       color: '#4f8cff',
     },
     {
       title: 'Mobile Apps',
       description: 'Cross-platform mobile applications using React Native and Flutter. Native performance with shared codebase for iOS and Android.',
-      icon: '↗',
       color: '#7c5cfc',
     },
     {
       title: 'eCommerce Solutions',
       description: 'High-converting online stores integrated with Shopify, payment processing, and analytics. Designed to maximize revenue.',
-      icon: '↘',
       color: '#4f8cff',
     },
     {
       title: 'Backend Systems',
       description: 'Scalable server architecture with Node.js, Python, and PostgreSQL. APIs, databases, and infrastructure that grow with your business.',
-      icon: '←',
       color: '#7c5cfc',
     },
     {
       title: 'AI Integration',
       description: 'Leverage AI and machine learning through integrations with OpenAI, automation systems, and intelligent workflows.',
-      icon: '↙',
       color: '#4f8cff',
     },
     {
       title: 'Performance Optimization',
       description: 'Audit and optimize existing applications. Reduce load times, improve Core Web Vitals, and enhance user experience.',
-      icon: '↖',
       color: '#7c5cfc',
     },
   ]
@@ -96,22 +90,11 @@ export function ServicesSection() {
 
                 {/* Content */}
                 <div className="relative z-10 space-y-6">
-                  {/* Icon & Title */}
-                  <div className="flex items-start justify-between">
-                    <div>
-                      <h3 className="font-display text-2xl lg:text-3xl font-bold text-[#f8fafc] mb-2">
-                        {service.title}
-                      </h3>
-                    </div>
-                    <motion.div
-                      className="text-2xl font-light"
-                      style={{ color: service.color }}
-                      initial={{ rotate: 0, x: 0 }}
-                      whileHover={{ rotate: 45, x: 4 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {service.icon}
-                    </motion.div>
+                  {/* Title */}
+                  <div>
+                    <h3 className="font-display text-2xl lg:text-3xl font-bold text-[#f8fafc] mb-2">
+                      {service.title}
+                    </h3>
                   </div>
 
                   {/* Description */}
