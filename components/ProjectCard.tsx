@@ -66,15 +66,15 @@ export function ProjectCard({
     <motion.section
       ref={ref}
       style={{ opacity, scale, y }}
-      className="sticky top-0 min-h-screen w-full flex items-center justify-center py-20 lg:py-32 px-4 lg:px-8"
+      className="sticky top-0 min-h-screen w-full flex items-center justify-center py-12 sm:py-20 lg:py-32 px-4 sm:px-6 lg:px-8"
     >
       <div className="max-w-7xl w-full">
         {/* Editorial layout - alternating left/right */}
-        <div className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start ${isEvenProject ? 'lg:flex-row-reverse' : ''}`}>
+        <div className={`grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-start ${isEvenProject ? 'lg:flex-row-reverse' : ''}`}>
           
           {/* LEFT SIDE - Meta Information & Description */}
           <motion.div
-            className={`lg:col-span-5 space-y-12 ${isEvenProject ? 'lg:col-start-8' : ''}`}
+            className={`lg:col-span-5 space-y-6 sm:space-y-8 lg:space-y-12 ${isEvenProject ? 'lg:col-start-8' : ''}`}
             initial={{ opacity: 0, x: isEvenProject ? 50 : -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: 'easeOut' }}
@@ -87,8 +87,8 @@ export function ProjectCard({
               transition={{ delay: 0.1, duration: 0.6 }}
               viewport={{ once: false }}
             >
-              <p className="text-sm uppercase tracking-widest text-[#94a3b8] font-semibold mb-1">Project</p>
-              <p className="text-7xl lg:text-8xl font-display font-bold" style={{ color }}>
+              <p className="text-xs sm:text-sm uppercase tracking-widest text-[#94a3b8] font-semibold mb-1">Project</p>
+              <p className="text-5xl sm:text-6xl lg:text-8xl font-display font-bold" style={{ color }}>
                 {String(number).padStart(2, '0')}
               </p>
             </motion.div>
@@ -100,26 +100,26 @@ export function ProjectCard({
               transition={{ delay: 0.15, duration: 0.7 }}
               viewport={{ once: false }}
             >
-              <h2 className="font-display text-5xl lg:text-6xl font-bold leading-[1.1] text-[#f8fafc]">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold leading-[1.1] text-[#f8fafc]">
                 {title}
               </h2>
             </motion.div>
 
             {/* Meta information - Floating grid */}
             <motion.div
-              className="grid grid-cols-2 gap-6"
+              className="grid grid-cols-2 gap-4 sm:gap-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.7 }}
               viewport={{ once: false }}
             >
               <div>
-                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-3">Year</p>
-                <p className="text-xl text-[#f8fafc] font-semibold">{year}</p>
+                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-2 sm:mb-3">Year</p>
+                <p className="text-lg sm:text-xl text-[#f8fafc] font-semibold">{year}</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-3">Category</p>
-                <p className="text-xl text-[#f8fafc] font-semibold">{category}</p>
+                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-2 sm:mb-3">Category</p>
+                <p className="text-lg sm:text-xl text-[#f8fafc] font-semibold">{category}</p>
               </div>
             </motion.div>
 
@@ -130,7 +130,7 @@ export function ProjectCard({
               transition={{ delay: 0.25, duration: 0.7 }}
               viewport={{ once: false }}
             >
-              <p className="text-[#94a3b8] leading-relaxed text-lg">
+              <p className="text-[#94a3b8] leading-relaxed text-base sm:text-lg">
                 {overview}
               </p>
             </motion.div>
@@ -142,10 +142,10 @@ export function ProjectCard({
               transition={{ delay: 0.3, duration: 0.7 }}
               viewport={{ once: false }}
             >
-              <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-4">Key Features</p>
-              <ul className="space-y-3">
+              <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-3 sm:mb-4">Key Features</p>
+              <ul className="space-y-2 sm:space-y-3">
                 {keyFeatures.map((feature, i) => (
-                  <li key={i} className="flex items-start gap-3 text-[#f8fafc]">
+                  <li key={i} className="flex items-start gap-3 text-[#f8fafc] text-sm sm:text-base">
                     <span className="text-[#4f8cff] font-bold mt-1">•</span>
                     <span>{feature}</span>
                   </li>
@@ -155,19 +155,19 @@ export function ProjectCard({
 
             {/* Challenges & Results */}
             <motion.div
-              className="space-y-6 border-t border-[rgba(255,255,255,0.08)] pt-6"
+              className="space-y-4 sm:space-y-6 border-t border-[rgba(255,255,255,0.08)] pt-4 sm:pt-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.7 }}
               viewport={{ once: false }}
             >
               <div>
-                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-3">Challenges</p>
-                <p className="text-[#f8fafc] leading-relaxed">{challenges}</p>
+                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-2 sm:mb-3">Challenges</p>
+                <p className="text-[#f8fafc] leading-relaxed text-sm sm:text-base">{challenges}</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-3">Result</p>
-                <p className="text-[#f8fafc] leading-relaxed">{result}</p>
+                <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-2 sm:mb-3">Result</p>
+                <p className="text-[#f8fafc] leading-relaxed text-sm sm:text-base">{result}</p>
               </div>
             </motion.div>
 
@@ -204,7 +204,7 @@ export function ProjectCard({
 
           {/* RIGHT SIDE - Technologies & Visual Content */}
           <motion.div
-            className={`lg:col-span-5 space-y-8 ${isEvenProject ? 'lg:col-start-1' : ''}`}
+            className={`lg:col-span-5 space-y-6 sm:space-y-8 ${isEvenProject ? 'lg:col-start-1' : ''}`}
             initial={{ opacity: 0, x: isEvenProject ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: 'easeOut', delay: 0.1 }}
@@ -217,12 +217,12 @@ export function ProjectCard({
               transition={{ delay: 0.25, duration: 0.7 }}
               viewport={{ once: false }}
             >
-              <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-4">Technologies</p>
+              <p className="text-xs uppercase tracking-widest text-[#94a3b8] font-semibold mb-3 sm:mb-4">Technologies</p>
               <div className="flex flex-wrap gap-2">
                 {technologies.map((tech, i) => (
                   <motion.span
                     key={i}
-                    className="px-4 py-2 rounded-full glass text-sm text-[#f8fafc] font-semibold"
+                    className="px-3 sm:px-4 py-2 rounded-full glass text-xs sm:text-sm text-[#f8fafc] font-semibold"
                     whileHover={{ scale: 1.05, backgroundColor: 'rgba(79, 140, 255, 0.1)' }}
                   >
                     {tech}
@@ -290,9 +290,9 @@ export function ProjectCard({
               />
             </motion.div>
 
-            {/* Divider line */}
+            {/* Divider line - Hidden on mobile */}
             <motion.div
-              className="h-px w-full"
+              className="h-px w-full hidden sm:block"
               style={{ background: `linear-gradient(90deg, transparent, ${color}40, transparent)` }}
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
@@ -300,9 +300,9 @@ export function ProjectCard({
               viewport={{ once: false }}
             />
 
-            {/* Additional Insights */}
+            {/* Additional Insights - Hidden on mobile */}
             <motion.div
-              className="space-y-4 text-sm text-[#94a3b8] leading-relaxed"
+              className="space-y-4 text-sm text-[#94a3b8] leading-relaxed hidden sm:block"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.45, duration: 0.7 }}
