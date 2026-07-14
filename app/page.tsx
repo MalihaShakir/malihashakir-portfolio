@@ -63,7 +63,7 @@ export default function Page() {
       color: '#000000',
       backgroundColor: '#1a1a1a',
       image: '/black-trucks.png',
-      liveUrl: 'https://black-trucksco.vercel.app/',
+      liveUrl: 'https://blacktruck111-main.vercel.app/',
     },
     {
       number: 3,
